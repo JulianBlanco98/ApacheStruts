@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.ejemplo</groupId>
+  <artifactId>ApacheStrutsBiblioteca</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>ApacheStrutsBiblioteca Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Struts 2 Core -->
+    <dependency>
+      <groupId>org.apache.struts</groupId>
+      <artifactId>struts2-core</artifactId>
+      <version>2.5.26</version>
+    </dependency>
+
+    <!-- MySQL Connector -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+      <version>8.2.0</version>
+    </dependency>
+
+    <!-- JSP/Servlet API (solo para compilar) -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-dbcp2</artifactId>
+      <version>2.9.0</version>
+    </dependency>
+
+    <!--  SLF4J API  -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.13</version>
+    </dependency>
+    <!--  Logback Classic (implementación de SLF4J)  -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.5.13</version>
+    </dependency>
+
+
+  </dependencies>
+  <build>
+    <finalName>ApacheStrutsBiblioteca</finalName>
+
+    <plugins>
+      <!-- Plugin para compilar WAR -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.2</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
